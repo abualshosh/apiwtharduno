@@ -1,0 +1,17 @@
+<div class="container">
+  <label id="example-radio-group-label">Pick your color</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="SelectedColor"
+  >
+    <mat-radio-button
+      class="example-radio-button"
+      *ngFor="let color of colors"
+      [value]="color"
+    >
+      {{ color }}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>
+<div>Your color is: {{ SelectedColor }}</div>
